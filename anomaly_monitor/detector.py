@@ -1,11 +1,11 @@
 """
 Two-layer anomaly detection: Isolation Forest + seasonality-aware z-score.
 
-Layer 1 — ML (Isolation Forest)
-  model.predict() returns -1 for anomalies; parameter sets contamination rate.
+Layer 1 - ML (Isolation Forest)         
+  - model.predict() returns -1 for anomalies; parameter sets contamination rate.
 
-Layer 2 — Statistical (z-score + velocity + approval-rate)
-  Uses pre-computed seasonal baselines so the live window cannot bias its own mean.
+Layer 2 - Statistical (z-score + velocity + approval-rate)
+  - Uses pre-computed seasonal baselines so the live window cannot bias its own mean.
 
 Surface conditions:
   - Both layers agree -> always surfaced

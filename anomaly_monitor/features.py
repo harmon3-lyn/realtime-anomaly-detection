@@ -40,9 +40,7 @@ WHERE transaction_date >= :since
 
 
 def fetch_monitor_data(window_hours: int | None = None) -> pd.DataFrame:
-    """
-    Pull the last 'window_hours' of data from live DB.
-    """
+    """Pull the last 'window_hours' of data from live DB."""
     window_hours = window_hours or config.get_monitor_window_hours()
     now = datetime.now(timezone.utc).replace(minute=0, second=0, microsecond=0)
     since = now - timedelta(hours=window_hours)
