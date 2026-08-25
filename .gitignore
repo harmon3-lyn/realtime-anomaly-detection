@@ -11,28 +11,36 @@ venv/
 env/
 ENV/
 
-# Distribution / packaging
-*.egg-info/
-dist/
-build/
+# Data
+data/
 
-# Tests / coverage
-.pytest_cache/
-.coverage
-.coverage.*
-coverage.xml
-
-# Type checkers
-.mypy_cache/
-.ruff_cache/
-
-# Jupyter
+# Notebooks
 .ipynb_checkpoints
 #notebooks/*.png
+notebooks/anomaly_detection_eval.ipynb
+notebooks/sample_viz.py
 
 # Logs
 *.log
 
 # Azure
 local.settings.json
+
+# Tests / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+tests/test_detector.py
+tests/test_trainer.py
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+
+# Type checkers
+.mypy_cache/
+.ruff_cache/
+
 
